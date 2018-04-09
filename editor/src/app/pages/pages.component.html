@@ -1,0 +1,20 @@
+<h2>My Pages</h2>
+<ul class="pages">
+  <li *ngFor="let page of pages"
+    [class.selected]="page === selectedPage"
+    (click)="onSelect(page)">
+    <span class="badge">{{page.title}}</span> {{page.description}}
+  </li>
+</ul>
+
+<div *ngIf="selectedPage">
+
+  <h2>{{ selectedPage.title | uppercase }} Details</h2>
+  <div><span>title: </span>{{selectedPage.title}}</div>
+  <div>
+    <label>description:
+      <input [(ngModel)]="selectedPage.description" placeholder="title">
+    </label>
+  </div>
+
+</div>
