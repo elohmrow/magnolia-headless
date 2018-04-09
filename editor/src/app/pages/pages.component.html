@@ -7,14 +7,4 @@
   </li>
 </ul>
 
-<div *ngIf="selectedPage">
-
-  <h2>{{ selectedPage.title | uppercase }} Details</h2>
-  <div><span>title: </span>{{selectedPage.title}}</div>
-  <div>
-    <label>description:
-      <input [(ngModel)]="selectedPage.description" placeholder="title">
-    </label>
-  </div>
-
-</div>
+<app-page-detail [page]="selectedPage"></app-page-detail>

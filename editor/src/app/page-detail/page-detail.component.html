@@ -1,0 +1,11 @@
+<div *ngIf="page">
+
+  <h2>{{ page.title | uppercase }} Details</h2>
+  <div><span>title: </span>{{page.title}}</div>
+  <div>
+    <label>description:
+      <input [(ngModel)]="page.description" placeholder="title">
+    </label>
+  </div>
+
+</div>
